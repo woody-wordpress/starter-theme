@@ -1,0 +1,4 @@
+$site_key: 'superot';
+$dist_dir: '/app/dist/#{$site_key}';
+@import "./../fonts/woody-icons/_icons";
+@import "woody-theme/src/scss/admin/_index";

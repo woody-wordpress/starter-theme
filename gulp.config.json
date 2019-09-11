@@ -1,0 +1,8 @@
+{
+    "icons": {
+        "src": [
+            "web/app/themes/woody-theme/src/icons/icons_set_01",
+            "web/app/themes/WP_SITE_KEY/src/icons"
+        ]
+    }
+}

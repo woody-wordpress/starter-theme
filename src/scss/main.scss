@@ -1,0 +1,11 @@
+$site_key: 'superot';
+$dist_dir: '/app/dist/#{$site_key}';
+// Framework
+@import "./../fonts/woody-icons/_icons";
+@import "settings/settings";
+@import "settings/woody_vars";
+@import "settings/vars";
+@import "woody-theme/src/scss/front/_index";
+
+// Custom
+@import "custom/_index";

@@ -1,0 +1,73 @@
+// RESET STYLE FOR NEWSLETTER NURITK
+$nurtik-border-color: $primary-color !default;
+$nurtik-outline-color: $nurtik-border-color !default;
+$nurtik-submit-icon: 044-enveloppe !default;
+$nurtik-submit-icon-color: $primary-color !default;
+$nurtik-font-color: $dark-gray;
+
+#mauticform_wrapper_inscriptionnewsletter {
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+    .mauticform-page-wrapper {
+        position: relative;
+
+        .mauticform-errormsg {
+            position: absolute;
+            color: $alert-color;
+            font-size: rem-calc(10);
+            font-weight: 700;
+            width: 100%;
+            bottom: -30px;
+            left: 0;
+        }
+
+    }
+
+    #mauticform_input_inscriptionnewsletter_mail {
+        margin: $global-margin*2 0;
+        border: none;
+        padding: 10px;
+        box-shadow: 0 2px 0 rgba($nurtik-border-color, .5);
+        outline-color: $nurtik-outline-color;
+        background-color: transparent;
+
+        &::placeholder {
+            color: $nurtik-font-color;
+            font-style: italic;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow: 0 2px 0 $nurtik-border-color;
+        }
+    }
+
+    #mauticform_input_inscriptionnewsletter_submit {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        background-color: transparent;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        color: transparent;
+        cursor: pointer;
+        @include wicon($nurtik-submit-icon, after);
+
+        &:after {
+            color: $nurtik-submit-icon-color;
+            font-weight: $global-weight-bold;
+            position: relative;
+            left: -2.5px;
+            @include transition(left);
+        }
+
+        &:hover {
+            &:after {
+                left: 2.5px;
+            }
+        }
+    }
+}
