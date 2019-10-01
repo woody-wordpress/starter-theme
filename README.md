@@ -41,9 +41,3 @@ For future contributors, please read our [Contributor Covenant Code of Conduct](
 ## :bookmark: License
 
 Woody Starter Theme is open-sourced software licensed under the [GPL2](LICENSE).
-
-## :crown: Sponsoring
-
-Woody is a digital ecosystem co-financed by the Regional Tourism Committee of Brittany for [eBreizh Connexion](http://www.ebreizhconnexion.bzh)
-
-![eBreizh Connexion](logo_ebreizh_connexion.png)
