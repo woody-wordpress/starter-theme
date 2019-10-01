@@ -1,7 +1,4 @@
 // Fix le pb entre la sticky bar des fiches et le menu principal
-
-$topheader-height: 40px; // HAUTEUR DU MENU
-
 .woodypage-playlist_tourism {
     @include breakpoint(medium down) {
         #responsive-layout-switcher {

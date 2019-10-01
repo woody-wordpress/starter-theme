@@ -1,0 +1,15 @@
+.woody-component-header {
+    .top-bar {
+        .menu>li {
+            a {
+                text-transform: $topbar-link-txt-transform;
+                font-weight: $topbar-link-font-weight;
+                color: $topbar-link-color;
+
+                &:hover {
+                    color: $topbar-link-hover-color;
+                }
+            }
+        }
+    }
+}

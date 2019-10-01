@@ -69,10 +69,10 @@ $global-lineheight: 1.5;
 $light-gray: #f3f3f3;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
-$black: #474343;
+$black: #464646;
 $white: #fefefe;
-$foundation-palette: (primary: #15AFD6,
-    secondary: #14CCC0,
+$foundation-palette: (primary: #21759b,
+    secondary: #d54e21,
     success: #3adb76,
     warning: #ffae00,
     alert: #cc4b37,
@@ -131,8 +131,9 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-$header-font-family: $body-font-family;
-$header-font-weight: $global-weight-normal;
+$header-font-family: 'Nunito Sans',
+sans-serif;
+$header-font-weight: 900;
 $header-font-style: normal;
 $font-family-monospace: Consolas,
 'Liberation Mono',

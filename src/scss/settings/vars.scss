@@ -1,1 +1,16 @@
+// Topheader
+$topheader-height: 40px; // HAUTEUR DU MENU
 
+// Top bar links (excludind submenus)
+$topbar-link-txt-transform : uppercase !default;
+$topbar-link-font-weight : bold !default;
+$topbar-link-color : $black;
+$topbar-link-hover-color : $primary-color !default;
+
+// Footer
+$footer-border: true !default;
+$footer-border-prop : 1px solid $medium-gray !default;
+
+// Buttons
+$button-txt-transform : uppercase !default;
+$button-font-weight : bold !default;
