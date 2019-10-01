@@ -25,8 +25,8 @@ Then download this starter theme and put it in your Wordpress themes directory.
 ## :wrench: CSS
 At the begining, there was [Foundation by Zurb framework](https://foundation.zurb.com/), enhanced with the [Woody Library](https://github.com/woody-wordpress/woody-library).
 Read [the framework documentation](https://foundation.zurb.com/sites/docs/) and then, play with the theme :
-- First, edit [the settings.scss file](https://github.com/woody-wordpress/starter-theme/blob/master/src/scss/settings/settings.scss)
-- You can also override [the library's vars](https://github.com/woody-wordpress/woody-library/tree/master/assets/scss/vars) in [woody_vars.scss](https://github.com/woody-wordpress/starter-theme/blob/master/src/scss/settings/woody_vars.scss)
+- First, edit the [settings.scss file](https://github.com/woody-wordpress/starter-theme/blob/master/src/scss/settings/settings.scss)
+- You can also override the [library's vars](https://github.com/woody-wordpress/woody-library/tree/master/assets/scss/vars) in the woody_vars.scss file
 - Empty files are at your disposal to help you organize your css. It's up to you to use it or not.
 
 ## :metal: Contributors
