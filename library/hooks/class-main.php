@@ -15,14 +15,11 @@ class SubWoodyTheme_Main
 
     protected function registerHooks()
     {
-        add_filter('body_class', [$this, 'setBodyClass']);
-
+        // add_filter('body_class', [$this, 'setBodyClass']);
         add_action('acf/save_post', [$this, 'clearOptionsTransient'], 20);
-        add_action('woody_theme_update', [$this,'cleanTransient']);
     }
 
-
-    // Permet d'ajouter une nouvelle classe au body (utile pour différencier plusieurs landing page CF: HMV)
+    // Permet d'ajouter une nouvelle classe au body
     public function setBodyClass($classes)
     {
         $classes[] = 'ma-super-class';
@@ -35,14 +32,8 @@ class SubWoodyTheme_Main
     {
         $screen = get_current_screen();
 
-        if (strpos($screen->id, 'ma-page-option') !== false) {
-            delete_transient('mon_transient');
+        if (strpos($screen->id, 'settings') !== false or strpos($screen->id, 'menu') !== false) {
+            delete_transient('woody_get_field_option');
         }
-    }
-
-    // Nettoie les transients lors d'un déploiement
-    public function cleanTransient()
-    {
-        delete_transient('mon_transient');
     }
 }

@@ -1,7 +1,67 @@
-<div class="woody_footer">
-    <div class="grid-x grid-padding-x align-stretch">
-        <div class="cell medium-6 large-4"></div>
-        <div class="cell medium-6 large-4"></div>
-        <div class="cell show-for-large large-4"></div>
+{% import "macros.twig" as Woody %}
+
+<div class="woody-footer grid-x">
+    <div class="cell large-4 brand-wrapper">
+        <a href="/" class="brand-logo" title="{{ __('Office de tourisme de ...', 'starter-theme')}}">
+            {{ brand.logo }}
+        </a>
+        <div class="contact-wrapper">
+            <div class="adress">
+                <span class="wicon wicon-039-pin"></span>
+                <adress>{{ brand.adress }}</adress>
+            </div>
+            <div class="phone">
+                <span class="wicon wicon-043-phone"></span>
+                <adress>{{ brand.phone.title }}</adress>
+            </div>
+        </div>
+        <div class="links-wrapper">
+            {% for item in brand.links %}
+            {{ Woody.link(item, 'button primary brand-link') }}
+            {% endfor %}
+        </div>
     </div>
+
+    <div class="cell large-4 bg-secondary newsletter-wrapper">
+        <span class="newsletter-title h2">{{ newsletter.title }}</span>
+        <span class="newsletter-description">{{ newsletter.description }}</span>
+
+        {{ newsletter.script|default }}
+
+        <div class="social-wrapper">
+            <span class="social-title">{{ __('Suivez-nous et soyez informés', 'starter-theme')}}</span>
+            {{ Woody.menu(menus.social, 'social-menu', 'social-link', false) }}
+        </div>
+    </div>
+
+    <div class="cell large-4 map-wrapper">
+        <div class="flex-container flex-dir-column align-center">
+            <ul class="vertical tabs" data-tabs id="map-tabs">
+                <li class="tabs-title is-active">
+                    <a href="#france" aria-selected="true">{{ __('France', 'starter-theme') }}</a>
+                </li>
+                <li class="tabs-title">
+                    <a href="#aura">{{ __('Auvergne-Rhône-Alpes', 'starter-theme') }}</a>
+                </li>
+                <li class="tabs-title">
+                    <a href="#ain">{{ __('Ain', 'starter-theme')}}</a>
+                </li>
+            </ul>
+            {{ Woody.link(map, 'button primary map-link') }}
+        </div>
+        <div class="tabs-content vertical" data-equalizer data-tabs-content="map-tabs">
+            <div class="tabs-panel is-active" data-equalizer-watch id="france">
+                <img src="{{ map.svg.france }}" alt="{{ __('Carte de France', 'starter-theme')}}" />
+            </div>
+            <div class="tabs-panel" data-equalizer-watch id="aura">
+                <img src="{{ map.svg.aura }}" alt="{{ __('Carte de la région Auvergne Rhônes-Alpes', 'starter-theme')}}" />
+            </div>
+            <div class="tabs-panel" data-equalizer-watch id="ain">
+                <img src="{{ map.svg.ain }}" alt="{{ __('Carte du département de l\'Ain', 'starter-theme') }}" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="woody-subfooter bg-primary">
+    {{ Woody.menu(menus.legal, 'legal-menu', 'legal-link') }}
 </div>

@@ -1,81 +1,83 @@
 <?php
-/**
- * Menus
- *
- * @package SubWoodyTheme
- * @since SubWoodyTheme 1.0.0
- */
 
-use Symfony\Component\Finder\Finder;
+/**
+ * Admin
+ *
+ * @package WoodyTheme
+ * @since WoodyTheme 1.28.35
+ *
+ */
 
 class SubWoodyTheme_Admin
 {
+    public $current_lang;
+    public $menu_post_ids;
+
     public function __construct()
     {
         $this->registerHooks();
+        $this->current_lang = pll_current_language();
+        $this->menu_post_ids = [6, 7, 8, 9]; //! Define menu post ids id here
     }
 
     protected function registerHooks()
     {
-        add_action('admin_menu', [$this, 'addMenuMainPages'], 11);
-        add_action('admin_menu', [$this, 'addWoodySettingsPage'], 11);
-        add_action('admin_menu', [$this, 'addMenusOptionsPages'], 11);
+        // Permet de définir les entrées de menu
+        // add_filter('woody/menus/set_menu_post_ids', [$this, 'setMenuPostIds'], 11);
+
+        // Permet d'ajouter un json au store pour la génération des pages d'options
+        // add_filter('woody/menus/acf_group_keys', [$this, 'acfJsonStore'], 11);
+
+        // Permet d'ajouter des PAGES d'options spécifique au thème enfant
+        // add_filter('woody/menus/create_pages_options', [$this, 'createPagesOptions'], 11, 2);
+
+        // Permet d'ajouter des SOUS-PAGES d'options spécifique au thème enfant
+        // add_filter('woody/menus/create_sub_pages_options', [$this, 'createSubpagesOptions'], 11, 2);
     }
 
-    // Affiche le menu principal par défaut sur une autre langue que le FR (utile pour les saisons)
-    public function addMenuMainPages()
+    public function setMenuPostIds($menu_post_ids)
     {
-        if (pll_current_language() == 'en') {
-            if (function_exists('acf_add_options_sub_page')) {
-                acf_add_options_sub_page(array(
-                    'page_title'    => 'Menu principal',
-                    'menu_title'    => 'Menu principal',
-                    'parent_slug'   => 'custom-menus',
-                    'capability'    => 'edit_pages',
-                ));
-            }
-        }
+        $menu_post_ids = $this->menu_post_ids;
+
+        return $menu_post_ids;
     }
 
-    // Ajoute une page d'option dans le back-office de WP
-    public function addWoodySettingsPage()
+    public function acfJsonStore($acf_json_keys)
     {
-        if (function_exists('acf_add_options_page')) {
-            acf_add_options_page(array(
-                'page_title'    => 'Shortcode',
-                'menu_title'    => 'Shortcode',
-                'menu_slug'     => 'shortcode-settings',
-                'capability'    => 'edit_pages',
-                'icon_url'      => 'dashicons-editor-code',
-                'position'      => 40,
-            ));
-        }
+        $acf_json_keys['footer'] = [
+        'acf_key' => 'group_footer', // Récupère la clé du .json
+        'description' => 'Groupe de champs ACF pour administrer le pied de page'
+    ];
+
+        return $acf_json_keys;
     }
 
-    // Ajoute une page d'option pour les menus secondaire
-    public function addMenusOptionsPages()
+    public function createPagesOptions($pages, $acf_json_store)
     {
-        if (function_exists('acf_add_options_sub_page')) {
-            acf_add_options_sub_page(array(
-                'page_title'    => 'Réseaux sociaux',
-                'menu_title'    => 'Réseaux sociaux',
-                'parent_slug'   => 'custom-menus',
-                'capability'    => 'edit_pages',
-            ));
+        $pages['footer-settings'] = [
+        'page_title'    => 'Administration du pied de page',
+        'menu_title'    => 'Pied de page',
+        'menu_slug'     => 'footer-settings-' . $this->current_lang,
+        'capability'    => 'edit_pages',
+        'icon_url'      => 'dashicons-admin-appearance',
+        'position'      => 30,
+        'acf_group_key' => $acf_json_store['footer']['acf_key'] // Récupère une clé dans le store précédement créee
+    ];
 
-            acf_add_options_sub_page(array(
-                'page_title'    => 'Infos légales',
-                'menu_title'    => 'Infos légales',
-                'parent_slug'   => 'custom-menus',
-                'capability'    => 'edit_pages',
-            ));
+        return $pages;
+    }
 
-            acf_add_options_sub_page(array(
-                'page_title'    => 'Presse & Pros',
-                'menu_title'    => 'Presse & Pros',
-                'parent_slug'   => 'custom-menus',
-                'capability'    => 'edit_pages',
-            ));
-        }
+    public function createSubpagesOptions($sub_pages, $acf_json_store)
+    {
+        $sub_pages['topheader-menu'] = [
+        'page_title'    => 'Administration du menu en haut de page',
+        'menu_title'    => 'Menu haut de page',
+        'menu_slug'     => 'topheader-menu-' . $this->current_lang,
+        'parent_slug'   => 'custom-menus',
+        'capability'    => 'edit_pages',
+        'acf_group_key' => $acf_json_store['link']['acf_key'], // Récupère une clé dans le store précédement créee
+    ];
+
+        return $sub_pages;
     }
 }
