@@ -17,7 +17,14 @@ class SubWoodyTheme_Admin
     {
         $this->registerHooks();
         $this->current_lang = pll_current_language();
-        $this->menu_post_ids = [6, 7, 8, 9]; //! Define menu post ids id here
+        switch ($this->current_lang) {
+            case 'fr':
+                $this->menu_post_ids = [6, 7, 8, 9]; //! Define menu post ids id here
+                break;
+            default:
+                $this->menu_post_ids = []; // Conserver un tableau pour éviter un warning sur array _splice
+            break;
+        }
     }
 
     protected function registerHooks()
