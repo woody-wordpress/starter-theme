@@ -9,3 +9,9 @@ $dist_dir: '/app/dist/#{$site_key}';
 
 // Custom
 @import "custom/_index";
+
+//FIXME: Remove this lines at the begining
+@import "starter_to_delete";
+
+// If roadbook => uncomment this line, else FIXME: Delete it
+@import "roadbook_rename_or_delete/_index";

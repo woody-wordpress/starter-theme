@@ -21,14 +21,17 @@ class SubWoodyTheme_Enqueue_Assets
     }
 
     public function enqueueLibraries()
-    { }
+    {
+    }
 
     public function setGlobalScriptString($globalScriptString)
     {
         $fonts = [
             'google' => [
                 'families' => [
-                    'Lato:300,400,900'
+                    //FIXME: Remove this lines at the begining
+                    'Patua+One',
+                    'Raleway'
                 ]
             ]
         ];

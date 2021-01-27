@@ -66,27 +66,26 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
-$light-gray: #f3f3f3;
+$light-gray: #f8f8f8;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
-$black: #464646;
+$dark-gray: #4b4b4b;
+$black: #272727;
 $white: #fefefe;
-$foundation-palette: (primary: #21759b,
-    secondary: #d54e21,
+$foundation-palette: (primary: #47c9b7,
+    secondary: #e62d9f,
     success: #3adb76,
     warning: #ffae00,
     alert: #cc4b37,
     lightgray: $light-gray,
     mediumgray:$medium-gray,
+    mediangray:#e3e3e3,
     darkgray:$dark-gray,
     black:$black,
     white:$white);
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue',
+$body-font-family: "Raleway",
 Helvetica,
-Roboto,
-Arial,
 sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
@@ -95,7 +94,7 @@ $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
-$global-menu-padding: 0.7rem 1rem;
+$global-menu-padding: 1.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
@@ -131,9 +130,9 @@ $block-grid-max: 8;
 
 // 4. Base Typography
 // ------------------
-$header-font-family: 'Nunito Sans',
+$header-font-family: 'Patua One',
 sans-serif;
-$header-font-weight: 900;
+$header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas,
 'Liberation Mono',
@@ -150,17 +149,17 @@ $header-styles: (small: ('h1': ('font-size': 24),
         'h6': ('font-size': 16),
     ),
     medium: ('h1': ('font-size': 48),
-        'h2': ('font-size': 40),
-        'h3': ('font-size': 31),
-        'h4': ('font-size': 25),
-        'h5': ('font-size': 20),
+        'h2': ('font-size': 36),
+        'h3': ('font-size': 26),
+        'h4': ('font-size': 22),
+        'h5': ('font-size': 18),
         'h6': ('font-size': 16),
     ),
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
 $header-small-font-color: $medium-gray;
-$paragraph-lineheight: 1.6;
+$paragraph-lineheight: 1.4;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $code-color: $black;
@@ -223,14 +222,14 @@ $input-error-font-weight: $global-weight-bold;
 // ------------
 $accordion-background: $white;
 $accordion-plusminus: true;
-$accordion-title-font-size: rem-calc(18);
+$accordion-title-font-size: rem-calc(16);
 $accordion-item-color: $primary-color;
-$accordion-item-background-hover: $light-gray;
+$accordion-item-background-hover: $primary-color;
 $accordion-item-padding: 1.25rem 1rem;
 $accordion-content-background: $white;
 $accordion-content-border: 1px solid $light-gray;
 $accordion-content-color: $body-font-color;
-$accordion-content-padding: 1rem;
+$accordion-content-padding: 2rem;
 
 // 8. Accordion Menu
 // -----------------
@@ -274,7 +273,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 $button-font-family: inherit;
-$button-padding: 0.85em 1em;
+$button-padding: 1em 2em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
 $button-background: $primary-color;
@@ -286,6 +285,7 @@ $button-hollow-border-width: 1px;
 $button-sizes: (tiny: 0.6rem,
     small: 0.75rem,
     default: 0.9rem,
+    medium:1.12rem,
     large: 1.25rem,
 );
 $button-palette: $foundation-palette;
@@ -452,8 +452,8 @@ $menu-margin: 0;
 $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: get-color(primary);
+$menu-item-color-active: $primary-color;
+$menu-item-background-active: $white;
 $menu-icon-spacing: 0.25rem;
 $menu-item-background-hover: $light-gray;
 $menu-state-back-compat: true;
@@ -749,7 +749,7 @@ $titlebar-background: $white;
 $titlebar-color: $black;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
+$titlebar-icon-color: $black;
 $titlebar-icon-color-hover: $medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 

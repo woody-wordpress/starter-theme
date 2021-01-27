@@ -1,0 +1,56 @@
+<div class="woody_footer bg-black padd-all-lg">
+    <div class="grid-x grid-padding-x align-stretch">
+        <div class="cell large-6 xlarge-4">
+            <div class="brand-wrapper">
+                <a class="brand-logo isRel" href="{{ site.url }}">{{ brand_logo|raw }}</a>
+            </div>
+            <div class="social-networks">
+                <span class="footer-block-text">Aenean tellus metus</span>
+                {% if social_networks.networks %}
+                    <ul class="list-unstyled flex-container align-middle">
+                        {% for key, network in social_networks.networks if network.url %}
+                            <li>
+                                <a class="no-ext" href="{{ network.url|default }}" target="_blank">
+                                    <span class="wicon {{ network.icon|default }}{% if social_networks.colorize %} {{ key }}{% endif %}"></span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="cell large-6 xlarge-4 newsletter-block flex-container flex-dir-column align-center align-middle">
+            <span class="footer-block-text">
+                Ut leo. Etiam ultricies nisi vel augue. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Morbi ac felis. Suspendisse nisl elit, rhoncus eget, elementum ac, condimentum eget, diam.
+                Duis lobortis massa imperdiet quam. Praesent adipiscing. Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Fusce vulputate eleifend sapien. Morbi vestibulum volutpat enim.
+            </span>
+        </div>
+
+        <div class="cell show-for-xlarge large-3 map-block flex-container flex-dir-column align-center align-middle text-center">
+            <span class="h4 footer-block-title">{{ __('Woody Sandbox', 'woody-sandbox') }}</span>
+            <p class="footer-block-text">Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis.</p>
+
+            <button class="button" data-open="footer-newsletter-form">
+                    <span class="link-title">{{ __('Contactez-nous', 'woody-sandbox') }}</span>
+            </button>
+            <div class="small reveal" id="footer-newsletter-form" data-reveal>
+                <div class="full-frame">
+                    <pre>Add your form here</pre>
+                </div>
+                <button class="close-button" data-close aria-label="Close modal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="subfooter flex-container align-justify align-middle wrap">
+    <div class="credits">
+        <small>
+            {{ __('Site réalisé par Raccourci Agency', 'woody-sandbox') }}
+        </small>
+    </div>
+</div>
+

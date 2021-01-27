@@ -30,7 +30,7 @@ class SubWoodyTheme_TemplateParts
         $this->current_lang = $this->admin->current_lang;
 
         // Logo
-        $this->website_logo = file_get_contents(get_stylesheet_directory() . '/src/img/logo.svg');
+        $this->website_logo = file_get_contents(get_stylesheet_directory() . '/logo.svg');
 
         // Generate menus
         $this->menus = new Admin_Menus();
@@ -48,7 +48,7 @@ class SubWoodyTheme_TemplateParts
         $mainMenuVars = $this->mainMenuVars();
 
         // Compile Footer
-        // $return['footer'] = Timber::compile('footer_main.twig', $this->footerVars());
+        $return['footer'] = Timber::compile('footer.twig', $this->footerVars());
 
         // Compile Main menu
         $return['main_menu'] = Timber::compile($this->twig_paths['pages_parts-header-tpl_01'], $mainMenuVars);
@@ -64,12 +64,7 @@ class SubWoodyTheme_TemplateParts
 
     private function topHeaderVars()
     {
-        $return = [
-            // 'menus' => [
-            //     'social' => apply_filters('woody_get_field_option', 'social-menu-' . $this->current_lang),
-            //     'pro' => apply_filters('woody_get_field_option', 'topheader-menu-' . $this->current_lang)
-            // ]
-        ];
+        $return = [];
 
         return $return;
     }
@@ -122,32 +117,39 @@ class SubWoodyTheme_TemplateParts
 
     private function footerVars()
     {
-        // $options = apply_filters('woody_get_field_option', 'footer-settings-' . $this->current_lang);
+        $social_networks = [
+            'fr' => [
+                'twitter' => 'https://twitter.com/',
+                'github' => 'https://github.com/',
+            ],
+        ];
 
         $return = [
-            // 'brand' => [
-            //     'logo' => $this->website_logo,
-            //     'adress' => $options['adress'],
-            //     'phone' => $options['phone'],
-            //     'links' => $options['buttons'],
-            // ],
-            // 'newsletter' => [
-            //     'title' => $options['title'],
-            //     'description' => $options['description'],
-            //     'script' => $options['script'],
-            // ],
-            // 'map' => [
-            //     'link' => $options['map_link'],
-            //     'svg' => [
-            //         'france' => get_stylesheet_directory_uri() . '/src/img/map/france.png',
-            //         'aura' => get_stylesheet_directory_uri() . '/src/img/map/aura.png',
-            //         'ain' => get_stylesheet_directory_uri() . '/src/img/map/ain.png'
-            //     ]
-            // ],
-            // 'menus' => [
-            //     'legal' => apply_filters('woody_get_field_option', 'legal-menu-' . $this->current_lang),
-            //     'social' => apply_filters('woody_get_field_option', 'social-menu-' . $this->current_lang)
-            // ]
+            'brand_logo' => file_get_contents(get_stylesheet_directory() . '/logo.svg'),
+            'social_networks' => [
+                'networks' => [
+                    'twitter' => [
+                        'icon' => 'wicon-002-twitter',
+                        'url' => $social_networks[$this->current_lang]['twitter'],
+                    ],
+                    'github' => [
+                        'icon' => 'wicon-064-github',
+                        'url' => $social_networks[$this->current_lang]['github'],
+                    ],
+                ]
+            ],
+            'subfooter' => [
+                'links' => [
+                    [
+                        'title' => __("Mentions légales", 'woody-sandbox'),
+                        'url' => get_permalink(pll_get_post(333924))
+                    ],
+                    [
+                        'title' => __("Politique de confidentialité", 'woody-sandbox'),
+                        'url' => get_permalink(pll_get_post(333792))
+                    ]
+                ]
+            ]
         ];
 
         return $return;
