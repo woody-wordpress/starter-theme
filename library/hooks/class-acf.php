@@ -15,7 +15,7 @@ class SubWoodyTheme_ACF
 
     protected function registerHooks()
     {
-        add_filter('acf/prepare_field/name=background_color', [$this, 'setCustomBackgroundColors']);
+        // add_filter('acf/prepare_field/name=background_color', [$this, 'setCustomBackgroundColors']);
         add_filter('customTinymce', [$this, 'setCustomTinyMCE'], 11);
     }
 
@@ -64,13 +64,13 @@ class SubWoodyTheme_ACF
         return $style_formats;
     }
 
-    public function setCustomBackgroundColors($options)
-    {
-        $options['choices']['bg-primary bg-motif bg-motif-left'] = 'Principal + Motif gauche';
-        $options['choices']['bg-primary bg-motif bg-motif-right'] = 'Principal + Motif droite';
+    // public function setCustomBackgroundColors($options)
+    // {
+    //     $options['choices']['bg-primary bg-motif bg-motif-left'] = 'Principal + Motif gauche';
+    //     $options['choices']['bg-primary bg-motif bg-motif-right'] = 'Principal + Motif droite';
 
-        $options['choices']['bg-secondary bg-motif bg-motif-left'] = 'Secondaire + Motif gauche';
-        $options['choices']['bg-secondary bg-motif bg-motif-right'] = 'Secondaire + Motif droite';
-        return $options;
-    }
+    //     $options['choices']['bg-secondary bg-motif bg-motif-left'] = 'Secondaire + Motif gauche';
+    //     $options['choices']['bg-secondary bg-motif bg-motif-right'] = 'Secondaire + Motif droite';
+    //     return $options;
+    // }
 }
