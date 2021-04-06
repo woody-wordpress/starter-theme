@@ -46,6 +46,7 @@ class SubWoodyTheme_TemplateParts
     {
         $return=[];
         $mainMenuVars = $this->mainMenuVars();
+        $sideMenuVars = $this->sideMenuVars();
 
         // Compile Footer
         $return['footer'] = Timber::compile('footer.twig', $this->footerVars());
@@ -56,8 +57,18 @@ class SubWoodyTheme_TemplateParts
         // Compile Mobile menu
         $return['mobile_menu'] =  Timber::compile($this->twig_paths['pages_parts-mobile_menu-tpl_01'], $mainMenuVars);
 
+        // Compile Side menu
+        // $return['side_menu'] = Timber::compile($this->twig_paths['pages_parts-side_menu-tpl_01'], $sideMenuVars);
+
         // Compile Top Header
         // $return['top_header'] = Timber::compile('top_header.twig', $this->topHeaderVars());
+
+        return $return;
+    }
+
+    private function sideMenuVars()
+    {
+        $return = [];
 
         return $return;
     }
