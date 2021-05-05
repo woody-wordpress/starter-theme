@@ -40,6 +40,32 @@ class SubWoodyTheme_Admin
 
         // Permet d'ajouter des SOUS-PAGES d'options spécifique au thème enfant
         // add_filter('woody/menus/create_sub_pages_options', [$this, 'createSubpagesOptions'], 11, 2);
+
+        // Permet d'ajouter une metabox avec les class de section sur le tableau de bord
+        add_action('wp_dashboard_setup', [$this, 'dashboardSetupWidgets']);
+    }
+
+    public function dashboardSetupWidgets()
+    {
+        wp_add_dashboard_widget(
+            'woody-sections-classes', // Widget slug.
+            'Classes de sections', // Title.
+            [$this, 'sectionsClassesWidget'] // Display function.
+        );
+    }
+
+    public function sectionsClassesWidget()
+    {
+        $data = [];
+        $data['description'] = "Utiliser les class de sections (affichés en gras) pour personnaliser le comportement de certains blocs";
+
+        $data['classes']['class_key'] = [
+            "title"     => "Class title",
+            "class_tags" => "class",
+            "legend"    => "Class description"
+        ];
+
+        return Timber::render('sectionsClassesWidget.twig', $data);
     }
 
     public function setMenuPostIds($menu_post_ids)
