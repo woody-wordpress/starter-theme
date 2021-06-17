@@ -22,21 +22,8 @@ class SubWoodyTheme_Enqueue_Assets
 
     public function enqueueLibraries()
     {
-        //FIXME: Remove this lines if not a roadbook
-        $print_rdbk = get_query_var('print_rdbk');
-        if (!empty($roadbook) && !empty($print_rdbk)) {
-            wp_enqueue_style('addon-roadbook-print-stylesheet', WP_DIST_URL . '/css/rdbk_print.css', [], '', 'all');
-        }
-        // FIXME: add this lines to gulp.config.json if there is a roadbook
-        // "css": {
-        //     "entry": [
-        //         "main.scss",
-        //         "tourism.scss",
-        //         "admin.scss",
-        //         "print.scss",
-        //         "rdbk_print.scss"
-        //     ]
-        // }
+        // FIXME: add this line to icons => src in gulp.config.json if there is a roadbook
+        // "vendor/woody-wordpress-pro/woody-addon-roadbook/Resources/Assets/icons"
     }
 
     public function setGlobalScriptString($globalScriptString)
