@@ -81,6 +81,7 @@ $foundation-palette: (primary: #47c9b7,
     darkgray:$dark-gray,
     black:$black,
     white:$white);
+$dark-list: (black, dark-gray); // TODO: Add primary and secondary if they are dark...
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: "Raleway",
