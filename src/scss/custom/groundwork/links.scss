@@ -1,13 +1,13 @@
-
 $link-selectors: 'p a:not([class*="button"]):not([class*="card"]):not([class*="title"]):not([class*="link"]):not([class*="logo"])';
+
 #{$link-selectors} {
-    &:hover {
-    }
+    &:hover {}
 }
-@include root-bg-colors($dark-list) {
-    #{$link-selectors} {
-       //color: $white; //TODO: Set Colors
-       &:hover {
-       }
-    }
-}
+
+// @include root-bg-colors($dark-list) {
+//     #{$link-selectors} {
+//        //color: $white; //TODO: Set Colors
+//        &:hover {
+//        }
+//     }
+// }
