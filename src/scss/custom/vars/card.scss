@@ -1,0 +1,129 @@
+// * Basic
+//$coloredbg-cardsection-bgcolor : $white;
+//$nobg-cardsection-bgcolor : $light-gray;
+//$nobg-splitcardsection-bgcolor : $nobg-cardsection-bgcolor;
+//$nobg-profileCardsection-bgcolor : $nobg-cardsection-bgcolor;
+
+// * Overlayed
+//$overlayed-bgcolor: $black;
+
+// * Overlayed texts shadow
+//$texts-shadow: false;
+//$texts-shadow-distance: 30px;
+//$texts-shadow-blur: 60px;
+//$texts-shadow-color: rgb(0, 0, 0);
+//$texts-shadow-opacity: .60;
+//$texts-shadow-layers: 5;
+//$texts-shadow-curve: .2;
+
+// * SplitCard (for now)
+//$cardsection-color: $white;
+//$cardsection-bgcolor: $primary-color;
+
+//$card-icon-size: 24;
+
+// * Cartouche distance sur une fiche circuit
+//$iti-length-top-position : 0;
+//$iti-length-bottom-position : auto;
+//$iti-length-right-position : auto;
+//$iti-length-left-position : 0;
+//$iti-length-border-radius : $global-radius;
+//$iti-length-bgcolor : $black;
+//$iti-length-color : $primary-color;
+//$iti-length-size : rem-calc(24);
+
+// * Cartouche infos séjour sur les cartes séjours
+//$card-tripInfos-top-position : $iti-length-top-position;
+//$card-tripInfos-bottom-position : $iti-length-bottom-position;
+//$card-tripInfos-right-position : $iti-length-right-position;
+//$card-tripInfos-left-position : $iti-length-left-position;
+//$card-tripInfos-border-radius : $global-radius;
+//$card-tripInfos-bgcolor: $black;
+//$card-tripInfos-color : $white;
+//$card-tripInfos-border-color : transparent;
+//$card-tripInfos-border-style : solid;
+//$card-tripInfos-border-width:0;
+//$card-priceTag-padding : 0;
+
+//$card-priceTag-width : 100px;
+//$card-priceTag-height : 100px;
+//$card-priceTag-fatSize : rem-calc(30);
+//$card-priceTag-smallSize : rem-calc(12);
+
+// * Card terms
+//$card-term-font-size: rem-calc(12);
+//$card-term-padding: 5px;
+//$card-term-bgcolor: transparent;
+//$card-term-color:$white;
+//$card-term-border-radius:$global-radius;
+//$card-term-border-color: $card-term-color;
+//$card-term-border-style:solid;
+//$card-term-border-width:1px;
+//$card-term-space:8px;
+
+//$card-bookable-font-size : $card-term-font-size;
+//$card-bookable-padding: $card-term-padding;
+//$card-bookable-bgcolor : $card-term-bgcolor;
+//$card-bookable-color : $card-term-color;
+//$card-bookable-font-weight : bold;
+//$card-bookable-border-radius:$card-term-border-radius;
+//$card-bookable-border-color: $card-bookable-bgcolor;
+//$card-bookable-border-style:solid;
+//$card-bookable-border-width:1px;
+//$card-bookable-top-pos : 4px;
+//$card-bookable-left-pos : auto;
+//$card-bookable-right-pos : $card-bookable-top-pos;
+
+// * Card events dates
+//$card-datePart-direction: column;
+//$card-date-font-family: $header-font-family;
+//$card-date-day-size: rem-calc(32);
+//$card-date-day-font-weight:$header-font-weight;
+//$card-date-month-size:rem-calc(14);
+//$card-date-month-font-weight:$card-date-day-font-weight;
+//$card-date-month-txt-transform: uppercase;
+
+// * Card sheet town and type
+//$card-sheet-town-color:darken($light-gray, 20%);
+//$card-sheet-type-color: $card-sheet-town-color;
+//$card-sheet-type-txt-transform:uppercase;
+
+
+//$icon-img-max-width: 150px;
+
+// * Card info itinerary
+//$iti-infos-type-icon-display: none;
+//$iti-infos-type-icon-color: $primary-color;
+//$iti-infos-type-icon-size: rem-calc(30);
+//$iti-infos-type-term-display: block;
+
+// * Round buttons
+//$round-card-button-size:60px;
+//$round-card-button-font-size:44;
+//$round-card-button-bgcolor:$primary-color;
+//$round-card-button-color:$white;
+//$round-card-button-border:none;
+
+// * Profile
+//$card-profile-padding: $global-padding;
+//$card-profile-img-size: 70px;
+//$card-profile-img-shadow:1px 3px 5px rgba($black, .1);
+//$card-profile-img-radius: 50%;
+//$card-profile-img-border: 2px solid $white;
+
+//$card-profile-font-size: rem-calc(12);
+//$card-profile-font-family: $body-font-family;
+//$card-profile-font-weight: $global-weight-normal;
+//$card-profile-font-style: italic;
+
+//$basiccard-profile-position: absolute;
+//$basiccard-profile-coords: (top: -3rem, right: 1rem);
+
+
+// * Card index
+//$cardIndex-top-pos : 0;
+//$cardIndex-left-pos : 0;
+//$cardIndex-color : $white;
+//$cardIndex-opacity : 1;
+//$cardIndex-font-size : 44;
+//$cardIndex-font-family : $header-font-family;

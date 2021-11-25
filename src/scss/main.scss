@@ -4,6 +4,7 @@ $dist_dir: '/app/dist/#{$site_key}';
 @import "./../fonts/woody-icons/_icons";
 @import "settings/settings";
 @import "settings/woody_vars";
+@import "vars/_index";
 @import "settings/vars";
 @import "woody-theme/src/scss/front/_index";
 
