@@ -6,15 +6,12 @@
  * @since SubWoodyTheme 1.0.0
  */
 
-use Woody\Menus\Admin_Menus;
-
 class SubWoodyTheme_TemplateParts
 {
     private $twig_paths;
     private $current_lang;
     private $admin;
     private $home_id;
-    private $menu_ids;
 
     public $website_logo;
 
@@ -32,14 +29,8 @@ class SubWoodyTheme_TemplateParts
         // Logo
         $this->website_logo = file_get_contents(get_stylesheet_directory() . '/logo.svg');
 
-        // Generate menus
-        $this->menus = new Admin_Menus();
-        $this->menus->addOptionsPagesFields();
-        $this->menus->addSubmenuFieldGroups();
-
         // Main menu
         $this->home_id = 5; //! Define home post id here
-        $this->menu_ids = $this->admin->menu_post_ids;
     }
 
     public function getParts()
@@ -52,10 +43,10 @@ class SubWoodyTheme_TemplateParts
         $return['footer'] = Timber::compile('footer.twig', $this->footerVars());
 
         // Compile Main menu
-        $return['main_menu'] = Timber::compile($this->twig_paths['pages_parts-header-tpl_01'], $mainMenuVars);
+        $return['main_menu'] = Timber::compile($this->twig_paths['menus-desktop_menu-tpl_01'], $mainMenuVars);
 
         // Compile Mobile menu
-        $return['mobile_menu'] =  Timber::compile($this->twig_paths['pages_parts-mobile_menu-tpl_01'], $mainMenuVars);
+        $return['mobile_menu'] = Timber::compile($this->twig_paths['menus-mobile_menu-tpl_01'], $mainMenuVars);
 
         // Compile Side menu
         // $return['side_menu'] = Timber::compile($this->twig_paths['pages_parts-side_menu-tpl_01'], $sideMenuVars);
@@ -82,26 +73,31 @@ class SubWoodyTheme_TemplateParts
 
     private function mainMenuVars()
     {
-        $ids = $this->menu_ids;
-
-        //! Place the logo in the menu
-        array_splice($ids, 0, 0, $this->home_id);
-
         $return = [];
-        $return['main_menu_links'] =  WoodyTheme_Menus::getMainMenu(5, $ids);
-        $return['is_frontpage'] = is_front_page();
-        $return['frontpage_title'] = ($return['is_frontpage']) ? get_option('blogname') : '';
-        // if(!empty($return['main_menu_links'])){
-        //     $menuDisplay = $this->getMenuDisplay();
-        //     foreach ($return['main_menu_links'] as $key => $menu_link) {
-        //         if($menu_link['the_url'] === pll_home_url(pll_current_language())){
-        //             $return['main_menu_links'][$key]['is_frontlink'] = true;
-        //         }
-        //         $return['main_menu_links'][$key]['subitems'] = WoodyTheme_Menus::getCompiledSubmenu($menu_link, $menuDisplay);
-        //     }
-        // }
+        
+        // Generate the header with the params below
+        $return['main_menu_links'] = Woody\Addon\Menus\Menus::getMainMenu(); // TODO: set the name of the ACF options page => 'main-menu' (default) || 'landing-menu' for landing menu for example
+        $return['menu_burger'] = false; // TODO: set if the header has a menu burger or not => false (default) || true
+        $return['menu_obfuscation'] = true; // TODO: set if the menu is obfuscated or not => true (default) || false
+        $return['logo_position'] = 'left'; // TODO: set the position of the logo => 'left' (default) || 'center'
+        
+        // Place the logo in the menu
+        if ($return['logo_position'] == 'left') {
+            $index = 0;
+        } else {
+            // Get the middle index to insert the logo at the right place
+            $menu_size = count($return['main_menu_links']) + 1; // Menu post ids + logo
+            $index = floor($menu_size / 2);
+        }
 
-        $return['logo'] = $this->website_logo;
+        $return['home'] = [
+            'logo' => $this->website_logo,
+            'the_id' => $this->home_id,
+            'the_url' => pll_home_url(pll_current_language()),
+            'title' => (!empty(get_field('in_menu_title', $this->home_id))) ? get_field('in_menu_title', $this->home_id) : get_post($this->home_id)->post_title,
+            'index' => (!empty($index)) ? $index : 0
+        ];
+
         return $return;
     }
 
