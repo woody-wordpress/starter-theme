@@ -33,7 +33,7 @@
 // Menu burger button bars
 // $menu-burger-bars-wrapper-height: 22px;
 // $menu-burger-bars-wrapper-width: 38px;
-// $menu-burger-bars-bgcolor: $black;
+// $menu-burger-bars-bgcolor: $menu-burger-title-color;
 // $menu-burger-bars-height: 2px;
 // $menu-burger-bars-width: 100%;
 // $menu-burger-bars-top-width: $menu-burger-bars-width;
@@ -57,12 +57,12 @@
 // $submenu-grid-transition: 0.9s ease-in-out;
 // $grid-max-width: 1600px;
 // $submenus-global-transition: 0.25s ease-in-out;
-// $submenu-grid-full-width: false;
+// $submenu-grid-full-width: true;
 // $extend-card-titles: true;
 // $submenu-animation-delay: false;
 // $submenu-wrapper-transition: $menu-global-transition;
 
 // Menu open
-// $menu-item-link-color-open: $black;
+// $menu-item-link-color-open: $menu-item-link-color;
 // $menu-burger-bgcolor-open: transparent;
 // $menu-burger-color-open: $black;

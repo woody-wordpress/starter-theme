@@ -1,15 +1,39 @@
-.woody-component-header {
-    .top-bar {
-        .menu>li {
-            a {
-                text-transform: $topbar-link-txt-transform;
-                font-weight: $topbar-link-font-weight;
-                color: $topbar-link-color;
+.woody-component-headnavs {
+    position: fixed;
 
-                &:hover {
-                    color: $topbar-link-hover-color;
-                }
-            }
+    .woody-component-header {
+        background-color: $white;
+    }
+}
+
+// Header with white background
+body.menu-is-open,
+body.is-scrolled,
+body.fullScrolled,
+body.no-hero,
+.single-touristic_sheet {
+    .woody-component-headnavs {
+
+        .woody-component-header {
+            background: $white;
+            box-shadow: 0px -10px 20px 10px rgba($black, 0.15);
         }
     }
 }
+
+// Header with transparent background
+// body.woodypage-front_page {
+//     padding-top: 0 !important;
+
+//     .woody-component-headnavs {
+//         .woody-component-header {
+//             background-color: transparent;
+//         }
+
+//         .brand-logo {
+//             svg>* {
+//                 fill: $white;
+//             }
+//         }
+//     }
+// }
