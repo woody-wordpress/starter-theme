@@ -1,18 +1,18 @@
-// Activation des animations
+// * Activation des animations
 // $subthemeAnimations: false;
 
-// $animationCustomList: (); // Ajout de classes d'animation custom sous forme de tableau
+// * Ajout de classes d'animation custom sous forme de tableau
+// $animationCustomList: ();
 // $animationTrigger: animation-trigger;
 // $animationTreshold: 0.4;
 
-// Transitions des animations de base
-// $anim-text-transition: .5s ease-in-out .6s;
-// $anim-gallery-transition: .3s ease-in-out;
-
-// Fade
+// * Fade
+// $anim-fade-transition: transform .5s ease-in-out .3s,
+// opacity .4s ease;
 // $anim-fade-distance: 15px;
 
-// Gallery zoom
+// * Gallery zoom
+// $anim-gallery-transition: .3s ease-in-out;
 // $anim-gallery-zoom-outline: true;
 // $anim-gallery-zoom-outline-width: 30px;
 // $anim-gallery-zoom-outline-transition: 1.2s cubic-bezier(.75, 0, .5, 1);
