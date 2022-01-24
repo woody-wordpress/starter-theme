@@ -32,6 +32,9 @@ class SubWoodyTheme_Admin
         // Permet de charger les assets du drag and drop sur des pages d'options spécifiques
         // add_filter('woody/menus/enqueue_load_ddrop_assets_pages_options', [$this, 'enqueueDragAndDropAssets'], 11);
 
+        // Permet d'appliquer le style des overlayed cards aux blocs d'images dans les sous-menus
+        // add_filter('woody/submenus/images_list_overlayed_style', [$this, 'setImagesListOverlayedStyle'], 11);
+
         // Permet d'ajouter une metabox avec les class de section sur le tableau de bord
         add_action('wp_dashboard_setup', [$this, 'dashboardSetupWidgets']);
     }
@@ -105,5 +108,10 @@ class SubWoodyTheme_Admin
         // array_push($allowed_options_pages, 'your-menu-slug');
 
         return $allowed_options_pages;
+    }
+
+    public function setImagesListOverlayedStyle()
+    {
+        return true;
     }
 }
