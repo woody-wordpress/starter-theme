@@ -57,6 +57,13 @@ class SubWoodyTheme_TemplateParts
         return $return;
     }
 
+    private function secondaryMenuVars()
+    {
+        $return = [];
+
+        return $return;
+    }
+
     private function sideMenuVars()
     {
         $return = [];
@@ -80,6 +87,8 @@ class SubWoodyTheme_TemplateParts
         $return['menu_burger'] = false; // TODO: set if the header has a menu burger or not => false (default) || true
         $return['menu_obfuscation'] = true; // TODO: set if the menu is obfuscated or not => true (default) || false
         $return['logo_position'] = 'left'; // TODO: set the position of the logo => 'left' (default) || 'center'
+
+        // $return['secondary_menu'] = Timber::compile('secondary_menu.twig', $this->secondaryMenuVars()); // TODO: remove this line if you have not a secondary menu in your main menu
         
         // Place the logo in the menu
         if ($return['logo_position'] == 'left') {
