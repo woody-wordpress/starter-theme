@@ -7,8 +7,8 @@
 // $animationTreshold: 0.4;
 
 // * Fade
-// $anim-fade-transition: transform .5s ease-in-out .3s,
-// opacity .4s ease;
+// $anim-fade-transition: transform .5s ease-in-out .1s,
+// opacity .5s ease .1s;
 // $anim-fade-distance: 15px;
 
 // * Gallery zoom
@@ -17,4 +17,4 @@
 // $anim-gallery-zoom-outline-width: 30px;
 // $anim-gallery-zoom-outline-transition: 1.2s cubic-bezier(.75, 0, .5, 1);
 // $anim-gallery-zoom-img-scale: scale(1.05);
-// $anim-gallery-zoom-img-transition: 1.2s cubic-bezier(.75, 0, .5, 1) .1s;
+// $anim-gallery-zoom-img-transition: 1.2s cubic-bezier(.75, 0, .5, 1);
