@@ -58,10 +58,12 @@ class SubWoodyTheme_Admin
         $data = [];
         $data['description'] = "Utilisez les classes de sections (affichées en gras) pour personnaliser le comportement de certains blocs.";
 
-        $data['classes']['class_key'] = [
-            "title"     => "Class title",
-            "class_tags" => "class",
-            "legend"    => "Class description"
+        $data['classes'] = [
+            'class_key' => [
+                "title"     => "Titre de la classe",
+                "class_tags" => "class",
+                "legend"    => "Description de la classe de section"
+            ]
         ];
 
         return Timber::render('sectionsClassesWidget.twig', $data);
