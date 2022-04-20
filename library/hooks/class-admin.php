@@ -56,7 +56,7 @@ class SubWoodyTheme_Admin
     public function sectionsClassesWidget()
     {
         $data = [];
-        $data['description'] = "Utiliser les class de sections (affichés en gras) pour personnaliser le comportement de certains blocs";
+        $data['description'] = "Utilisez les classes de sections (affichées en gras) pour personnaliser le comportement de certains blocs.";
 
         $data['classes']['class_key'] = [
             "title"     => "Class title",
