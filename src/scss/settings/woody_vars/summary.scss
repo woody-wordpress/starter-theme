@@ -1,5 +1,18 @@
 // $summary-fixed-position: 0;
 
+// ------------------------------
+// Summary accordion
+// ------------------------------
+
+// $summary-accordion-height: 90px;
+// $summary-accordion-padding: 20px;
+// $summary-accordion-transform-item: -15px;
+// $summary-accordion-transform-menu: -60px;
+// $summary-accordion-open-transform-menu: -40px;
+// $summary-accordion-icon: arrow;
+// $summary-arrow-color: $primary-color;
+// $summary-arrow-font-size: 20px;
+
 // Summary item index
 // $summary-item-index-reset-style: false;
 // $summary-item-size: 28px;
@@ -12,7 +25,7 @@
 // $summary-item-border-radius: 50%;
 
 // ------------------------------
-// Summary tpl_02 with item index in fixed position
+// Summary tabs
 // ------------------------------
 
 // Summary block
@@ -29,6 +42,15 @@
 // $summary-side-title-border-radius: 25px;
 // $summary-side-title-padding: 5px 10px;
 
+// Summary tabs
+// $summary-tabs-bg-color: $white;
+// $summary-tabs-title-color-inactive: $black;
+// $summary-tabs-title-color-active: $summary-tabs-bg-color;
+// $summary-tabs-title-bg-color-active: $summary-tabs-title-color-inactive;
+// $summary-tabs-border-radius: 25px;
+// $summary-tabs-width: 75px;
+// $summary-tabs-padding: 5px 10px;
+
 // Summary geomap anchor
 // $summary-geomap-anchor-height: 30px;
 // $summary-geomap-anchor-bg-color: $white;
@@ -37,12 +59,8 @@
 // $summary-geomap-anchor-font-weight: bold;
 
 // ------------------------------
-// Summary tpl_03 with vertical menu
+// Summary with vertical menu
 // ------------------------------
 
 // Summary block
 // $summary-max-width: 265px;
-
-// Summary arrow icon (< large)
-// $summary-arrow-color: $primary-color;
-// $summary-arrow-font-size: 18px;
