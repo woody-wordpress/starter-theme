@@ -1,0 +1,149 @@
+{
+  "key": "submenu_customblock_sitekey",
+  "title": "[SOUS-MENU] - Custom Block",
+  "fields": [
+      {
+          "key": "field_626c61c7b7e22",
+          "label": "Custom Block",
+          "name": "submenu_customblock_sitekey",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "hide-label",
+              "id": ""
+          },
+          "layout": "block",
+          "sub_fields": [
+              {
+                  "key": "field_123bd8ddb8de5",
+                  "label": "Titre du bloc",
+                  "name": "",
+                  "type": "tab",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "placement": "left",
+                  "endpoint": 0
+              },
+              {
+                  "key": "field_626bd8f3b9b6b",
+                  "label": "",
+                  "name": "title",
+                  "type": "clone",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "clone": [
+                      "field_6138c35a218ec"
+                  ],
+                  "display": "seamless",
+                  "layout": "block",
+                  "prefix_label": 0,
+                  "prefix_name": 0
+              },
+              {
+                  "key": "field_626c620fb7e23",
+                  "label": "Contenu",
+                  "name": "",
+                  "type": "tab",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "placement": "left",
+                  "endpoint": 0
+              },
+              {
+                  "key": "field_524bda27b8de8",
+                  "label": "Mise en page",
+                  "name": "",
+                  "type": "tab",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "placement": "left",
+                  "endpoint": 0
+              },
+              {
+                  "key": "field_657bda66b7bc",
+                  "label": "Position dans la grille",
+                  "name": "grid_position",
+                  "type": "clone",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "clone": [
+                      "field_615b028cb2ab4"
+                  ],
+                  "display": "seamless",
+                  "layout": "block",
+                  "prefix_label": 0,
+                  "prefix_name": 0
+              },
+              {
+                  "key": "field_6296bf2eb7ae2",
+                  "label": "FIN",
+                  "name": "",
+                  "type": "accordion",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "open": 0,
+                  "multi_expand": 0,
+                  "endpoint": 1
+              }
+          ]
+      }
+  ],
+  "location": [
+      [
+          {
+              "param": "post_type",
+              "operator": "==",
+              "value": "post"
+          }
+      ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1651270287
+}
