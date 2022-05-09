@@ -30,7 +30,7 @@ class SubWoodyTheme_TemplateParts
         $this->website_logo = file_get_contents(get_stylesheet_directory() . '/logo.svg');
 
         // Main menu
-        $this->home_id = 5; //! Define home post id here
+        $this->home_id = pll_get_post(5); //! Define home post id here
     }
 
     public function getParts()
