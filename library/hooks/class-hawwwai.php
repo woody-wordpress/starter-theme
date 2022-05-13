@@ -24,8 +24,6 @@ class SubWoodyTheme_Hawwwai
             'your_aspect'
         ];
 
-        $aspects = array_merge($custom_aspects, $aspects);
-
-        return $aspects;
+        return array_merge($custom_aspects, $aspects);
     }
 }

@@ -45,8 +45,7 @@ class SubWoodyTheme_ACF
             'cc4b37', 'alert'
         ];
 
-        $colors = json_encode($colors);
-        return $colors;
+        return json_encode($colors);
     }
 
     private function setCustomStyleFormats($style_formats)
@@ -67,10 +66,7 @@ class SubWoodyTheme_ACF
     // public function setCustomBackgroundColors($options)
     // {
     //     $options['choices']['bg-primary bg-motif bg-motif-left'] = 'Principal + Motif gauche';
-    //     $options['choices']['bg-primary bg-motif bg-motif-right'] = 'Principal + Motif droite';
 
-    //     $options['choices']['bg-secondary bg-motif bg-motif-left'] = 'Secondaire + Motif gauche';
-    //     $options['choices']['bg-secondary bg-motif bg-motif-right'] = 'Secondaire + Motif droite';
     //     return $options;
     // }
 }

@@ -20,9 +20,12 @@ class SubWoodyTheme_Polylang
 
     public function loadThemeTextdomain()
     {
-        load_theme_textdomain('superot', get_stylesheet_directory() . '/languages');
+        load_theme_textdomain('superot', get_stylesheet_directory() . '/languages'); //TODO: Chnage the sitekey
     }
 
+    /**
+     * @noRector
+     */
     private function twigExtractPot()
     {
         // Commande pour créer automatiquement woody-theme.pot

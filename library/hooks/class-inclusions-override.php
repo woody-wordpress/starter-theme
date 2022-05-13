@@ -15,12 +15,13 @@ class SubWoodyTheme_InclusionsOverride
 
     public function incHeaderPart($context)
     {
-        // wd($context);
+        // console_log($context);
         return $context;
     }
+
     public function incFooterPart($context)
     {
-        // wd($context);
+        // console_log($context);
         return $context;
     }
 }

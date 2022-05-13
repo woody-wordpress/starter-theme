@@ -32,7 +32,7 @@ class SubWoodyTheme_Main
     {
         $screen = get_current_screen();
 
-        if (strpos($screen->id, 'settings') !== false or strpos($screen->id, 'menu') !== false) {
+        if (strpos($screen->id, 'settings') !== false || strpos($screen->id, 'menu') !== false) {
             delete_transient('woody_get_field_option');
         }
     }

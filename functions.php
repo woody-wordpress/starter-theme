@@ -15,6 +15,7 @@ $finder->files()->in(__DIR__ . '/library/hooks')->name('*.php')->notName('autolo
 foreach ($finder as $file) {
     require_once($file->getPathname());
 }
+
 require_once(__DIR__ . '/library/hooks/autoloader.php');
 
 // Load classes
