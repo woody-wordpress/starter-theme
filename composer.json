@@ -1,0 +1,10 @@
+{
+    "name": "woody-wordpress/starter-theme",
+    "type": "wordpress-vendor",
+    "version": "1.0.0",
+    "description": "",
+    "license": "GPL-2.0",
+    "require": {
+        "php": "^7.3"
+    }
+}
