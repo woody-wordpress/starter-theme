@@ -31,6 +31,7 @@ class SubWoodyTheme_TemplateParts
 
         // Main menu
         $this->home_id = pll_get_post(5); // TODO: insert the home post id
+    }
 
     public function getParts()
     {
@@ -80,7 +81,7 @@ class SubWoodyTheme_TemplateParts
     private function mainMenuVars()
     {
         $return = [];
-        
+
         // Generate the header with the params below
         $return['main_menu_links'] = Woody\Addon\Menus\Menus::getMainMenu(); // TODO: set the name of the ACF options page => 'main-menu' (default) || 'landing-menu' for landing menu for example
         $return['menu_burger'] = false; // TODO: set if the header has a menu burger or not => false (default) || true
@@ -88,7 +89,7 @@ class SubWoodyTheme_TemplateParts
         $return['logo_position'] = 'left'; // TODO: set the position of the logo => 'left' (default) || 'center'
 
         // $return['secondary_menu'] = Timber::compile('secondary_menu.twig', $this->secondaryMenuVars()); // TODO: remove this line if you have not a secondary menu in your main menu
-        
+
         // Place the logo in the menu
         if ($return['logo_position'] == 'left') {
             $index = 0;
