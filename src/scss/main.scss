@@ -10,6 +10,3 @@ $dist_dir: '/app/dist/#{$site_key}';
 // Custom
 @import "custom/_index";
 // @import "plugins/menus_v2/_index"; // FIXME: Uncomment for loading menus_v2 SCSS
-
-// If roadbook => uncomment this line, else FIXME: Delete it
-// @import "roadbook_rename_or_delete/_index";
