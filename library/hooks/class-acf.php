@@ -33,13 +33,13 @@ class SubWoodyTheme_ACF
     private function setCustomColors()
     {
         $colors = [
-            'F58536', 'primaire',
-            '0067B1', 'secondaire',
-            '464646', 'noir',
-            '8a8a8a', 'gris foncé',
-            'cacaca', 'gris moyen',
-            'f3f3f3', 'gris clair',
-            'fefefe', 'blanc',
+            // 'F58536', 'primaire',
+            // '0067B1', 'secondaire',
+            // '464646', 'noir',
+            // '8a8a8a', 'gris foncé',
+            // 'cacaca', 'gris moyen',
+            // 'f3f3f3', 'gris clair',
+            // 'fefefe', 'blanc',
             '3adb76', 'success',
             'ffae00', 'warning',
             'cc4b37', 'alert'
