@@ -3,11 +3,3 @@ $link-selectors: 'p a:not([class*="button"]):not([class*="card"]):not([class*="t
 #{$link-selectors} {
     &:hover {}
 }
-
-// @include root-bg-colors($dark-list) {
-//     #{$link-selectors} {
-//        //color: $white; //TODO: Set Colors
-//        &:hover {
-//        }
-//     }
-// }

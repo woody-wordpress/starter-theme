@@ -85,7 +85,7 @@ class SubWoodyTheme_TemplateParts
         // Generate the header with the params below
         $return['main_menu_links'] = Woody\Addon\Menus\Menus::getMainMenu(); // TODO: set the name of the ACF options page => 'main-menu' (default) || 'landing-menu' for landing menu for example
         $return['menu_burger'] = false; // TODO: set if the header has a menu burger or not => false (default) || true
-        $return['menu_obfuscation'] = true; // TODO: set if the menu is obfuscated or not => true (default) || false
+        $return['menu_obfuscation'] = true;
         $return['logo_position'] = 'left'; // TODO: set the position of the logo => 'left' (default) || 'center'
 
         // $return['secondary_menu'] = Timber::compile('secondary_menu.twig', $this->secondaryMenuVars()); // TODO: remove this line if you have not a secondary menu in your main menu

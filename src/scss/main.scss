@@ -8,5 +8,5 @@ $dist_dir: '/app/dist/#{$site_key}';
 @import "woody-theme/src/scss/front/_index";
 
 // Custom
+@import "plugins/menus_v2/_index";
 @import "custom/_index";
-// @import "plugins/menus_v2/_index"; // FIXME: Uncomment for loading menus_v2 SCSS
