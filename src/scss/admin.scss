@@ -4,3 +4,6 @@ $dist_dir: '/app/dist/#{$site_key}';
 @import "wicon";
 @import "wicon/base";
 @import "woody-theme/src/scss/admin/_index";
+
+// Custom admin
+@import "custom/admin/_index";

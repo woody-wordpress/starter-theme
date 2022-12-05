@@ -1,0 +1,13 @@
+.acf-fc-popup {
+    ul {
+        li {
+            a {
+                &[data-layout='custom_block_WP_SITE_KEY'] {
+                    &:before {
+                        content: '\f348';
+                    }
+                }
+            }
+        }
+    }
+}
