@@ -102,7 +102,7 @@ class SubWoodyTheme_TemplateParts
         $return['home'] = [
             'logo' => $this->website_logo,
             'the_id' => $this->home_id,
-            'the_url' => pll_home_url(pll_current_language()),
+            'the_url' => get_permalink(pll_get_post($this->home_id)),
             'title' => (!empty(get_field('in_menu_title', $this->home_id))) ? get_field('in_menu_title', $this->home_id) : get_post($this->home_id)->post_title,
             'index' => (!empty($index)) ? $index : 0
         ];
