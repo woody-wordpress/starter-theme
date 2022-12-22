@@ -87,6 +87,7 @@ class SubWoodyTheme_TemplateParts
         $return['menu_burger'] = false; // TODO: set if the header has a menu burger or not => false (default) || true
         $return['menu_obfuscation'] = true;
         $return['logo_position'] = 'left'; // TODO: set the position of the logo => 'left' (default) || 'center'
+        // $return['menu_burger_custom_html'] = file_get_contents(get_stylesheet_directory() . '/src/img/svg/menu-burger.svg'); // TODO: uncomment this line if you want a custom menu burger icon
 
         // $return['secondary_menu'] = Timber::compile('secondary_menu.twig', $this->secondaryMenuVars()); // TODO: remove this line if you have not a secondary menu in your main menu
 
