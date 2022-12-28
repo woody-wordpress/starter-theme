@@ -58,9 +58,7 @@ class SubWoodyTheme_ACF
             'classes' => 'list-unstyled list-wicon check-icon',
         ];
 
-        $style_formats = json_encode($style_formats, JSON_THROW_ON_ERROR);
-
-        return $style_formats;
+        return json_encode($style_formats, JSON_THROW_ON_ERROR);
     }
 
     // public function setCustomBackgroundColors($options)

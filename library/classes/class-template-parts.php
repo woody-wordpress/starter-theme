@@ -59,23 +59,17 @@ class SubWoodyTheme_TemplateParts
 
     private function secondaryMenuVars()
     {
-        $return = [];
-
-        return $return;
+        return [];
     }
 
     private function sideMenuVars()
     {
-        $return = [];
-
-        return $return;
+        return [];
     }
 
     private function topHeaderVars()
     {
-        $return = [];
-
-        return $return;
+        return [];
     }
 
     private function mainMenuVars()
@@ -92,7 +86,7 @@ class SubWoodyTheme_TemplateParts
         // $return['secondary_menu'] = Timber::compile('secondary_menu.twig', $this->secondaryMenuVars()); // TODO: remove this line if you have not a secondary menu in your main menu
 
         // Place the logo in the menu
-        if ($return['logo_position'] == 'left') {
+        if ($return['logo_position'] === 'left') {
             $index = 0;
         } else {
             // Get the middle index to insert the logo at the right place
@@ -104,8 +98,8 @@ class SubWoodyTheme_TemplateParts
             'logo' => $this->website_logo,
             'the_id' => $this->home_id,
             'the_url' => get_permalink(pll_get_post($this->home_id)),
-            'title' => (!empty(get_field('in_menu_title', $this->home_id))) ? get_field('in_menu_title', $this->home_id) : get_post($this->home_id)->post_title,
-            'index' => (!empty($index)) ? $index : 0
+            'title' => (empty(get_field('in_menu_title', $this->home_id))) ? get_post($this->home_id)->post_title : get_field('in_menu_title', $this->home_id),
+            'index' => (empty($index)) ? 0 : $index
         ];
 
         return $return;
@@ -113,7 +107,7 @@ class SubWoodyTheme_TemplateParts
 
     private function getMenuDisplay()
     {
-        $return = [
+        return [
             // 'replace_with_post_id' => [
             //     'grid_tpl' => 'grids_basic-grid_2_cols-tpl_02',
             //     'parts' => [
@@ -128,8 +122,6 @@ class SubWoodyTheme_TemplateParts
             //     ]
             // ]
         ];
-
-        return $return;
     }
 
     private function footerVars()
@@ -141,7 +133,7 @@ class SubWoodyTheme_TemplateParts
             ],
         ];
 
-        $return = [
+        return [
             'brand_logo' => file_get_contents(get_stylesheet_directory() . '/logo.svg'),
             'social_networks' => [
                 'networks' => [
@@ -168,7 +160,5 @@ class SubWoodyTheme_TemplateParts
                 ]
             ]
         ];
-
-        return $return;
     }
 }
