@@ -37,7 +37,6 @@ class SubWoodyTheme_TemplateParts
     {
         $return=[];
         $mainMenuVars = $this->mainMenuVars();
-        $sideMenuVars = $this->sideMenuVars();
 
         // Compile Footer
         $return['footer'] = Timber::compile('footer.twig', $this->footerVars());
@@ -49,27 +48,12 @@ class SubWoodyTheme_TemplateParts
         $return['mobile_menu'] = Timber::compile($this->twig_paths['menus-mobile_menu-tpl_01'], $mainMenuVars);
 
         // Compile Side menu
-        // $return['side_menu'] = Timber::compile($this->twig_paths['pages_parts-side_menu-tpl_01'], $sideMenuVars);
+        // $return['side_menu'] = Timber::compile($this->twig_paths['pages_parts-side_menu-tpl_01'], $this->sideMenuVars());
 
         // Compile Top Header
         // $return['top_header'] = Timber::compile('top_header.twig', $this->topHeaderVars());
 
         return $return;
-    }
-
-    private function secondaryMenuVars()
-    {
-        return [];
-    }
-
-    private function sideMenuVars()
-    {
-        return [];
-    }
-
-    private function topHeaderVars()
-    {
-        return [];
     }
 
     private function mainMenuVars()
@@ -103,25 +87,6 @@ class SubWoodyTheme_TemplateParts
         ];
 
         return $return;
-    }
-
-    private function getMenuDisplay()
-    {
-        return [
-            // 'replace_with_post_id' => [
-            //     'grid_tpl' => 'grids_basic-grid_2_cols-tpl_02',
-            //     'parts' => [
-            //         [
-            //             'custom_function' => 'put_your_function_name_here'
-            //         ],
-            //         [
-            //             'part_tpl' => 'grids_basic-grid_1_cols-tpl_01',
-            //             'links_tpl' => 'nav_items-nav_item_list-tpl_01',
-            //             'no_padding' => 1
-            //         ],
-            //     ]
-            // ]
-        ];
     }
 
     private function footerVars()
