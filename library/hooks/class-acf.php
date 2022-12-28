@@ -50,7 +50,7 @@ class SubWoodyTheme_ACF
 
     private function setCustomStyleFormats($style_formats)
     {
-        $style_formats = json_decode($style_formats);
+        $style_formats = json_decode($style_formats, null, 512, JSON_THROW_ON_ERROR);
 
         $style_formats[] = [
             'title' => 'Liste "Check"',
@@ -58,7 +58,7 @@ class SubWoodyTheme_ACF
             'classes' => 'list-unstyled list-wicon check-icon',
         ];
 
-        $style_formats = json_encode($style_formats);
+        $style_formats = json_encode($style_formats, JSON_THROW_ON_ERROR);
 
         return $style_formats;
     }
