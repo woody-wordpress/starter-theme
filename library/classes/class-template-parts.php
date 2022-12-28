@@ -9,8 +9,11 @@
 class SubWoodyTheme_TemplateParts
 {
     private $twig_paths;
+
     private $current_lang;
+
     private $admin;
+
     private $home_id;
 
     public $website_logo;
