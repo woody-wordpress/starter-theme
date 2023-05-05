@@ -31,8 +31,6 @@ class SubWoodyTheme_Enqueue_Assets
         $fonts = [
             'google' => [
                 'families' => [
-                    //FIXME: Remove this lines at the begining
-                    'Patua+One',
                     'Raleway'
                 ]
             ]

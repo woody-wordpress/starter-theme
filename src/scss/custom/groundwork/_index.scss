@@ -1,3 +1,11 @@
 @import 'grid';
 @import 'links';
 @import 'typography';
+
+body.zoning-style {
+
+    .woody-component-movie .plyrObject img,
+    .imageObject-img {
+        filter: grayscale(1) contrast(.15);
+    }
+}
