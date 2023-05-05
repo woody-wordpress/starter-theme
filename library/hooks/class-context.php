@@ -24,7 +24,7 @@ class SubWoodyTheme_Context
         //$context['metas'][] = '<meta name="msvalidate.01" content="44C6D6BCD7EF9707330242312AB178BF" />';
 
         //FIXME: Remove to display images properly
-        $context['body_class'] = 'zoning-style';
+        $context['body_class'] .= ' zoning-style';
 
         return $context;
     }
