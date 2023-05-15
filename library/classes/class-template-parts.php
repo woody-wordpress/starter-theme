@@ -30,7 +30,7 @@ class SubWoodyTheme_TemplateParts
         $this->current_lang = $this->admin->current_lang;
 
         // Logo
-        $this->website_logo = file_get_contents(get_stylesheet_directory() . '/logo.svg');
+        $this->website_logo = '<img class="lazyload" src="' . get_stylesheet_directory_uri() . '/logo.svg" alt="Logo SITEKEY">'; // TODO: edit alt
 
         // Main menu
         $this->home_id = get_option('page_on_front') != false ? pll_get_post(get_option('page_on_front')) : pll_get_post(5);
@@ -102,7 +102,7 @@ class SubWoodyTheme_TemplateParts
         ];
 
         return [
-            'brand_logo' => file_get_contents(get_stylesheet_directory() . '/logo.svg'),
+            'brand_logo' => $this->website_logo,
             'social_networks' => [
                 'networks' => [
                     'twitter' => [
