@@ -16,6 +16,7 @@ class SubWoodyTheme_Main
     protected function registerHooks()
     {
         // add_filter('body_class', [$this, 'setBodyClass']);
+        add_filter('woody_timber_compile_globals', [$this, 'woodyTimberCompileGlobals']);
         add_action('acf/save_post', [$this, 'clearOptionsTransient'], 20);
     }
 
@@ -25,6 +26,12 @@ class SubWoodyTheme_Main
         $classes[] = 'ma-super-class';
 
         return $classes;
+    }
+
+    public function woodyTimberCompileGlobals($globals)
+    {
+        $globals['mergedHnTitles'] = true;
+        return $globals;
     }
 
     // Nettoie les transient lors de l'enregistrement d'une page d'option
