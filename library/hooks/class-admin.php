@@ -76,14 +76,15 @@ class SubWoodyTheme_Admin
 
     public function createPagesOptions($pages, $acf_json_store)
     {
-        // $pages['your-page'] = [
-        //     'page_title'    => 'Administration du ...',
-        //     'menu_title'    => 'Nom de la page',
-        //     'menu_slug'     => 'your-slug',
+        // $pages['interactive-map'] = [
+        //     'page_title'    => 'Administration de la carte interactive',
+        //     'menu_title'    => 'Carte interactive',
+        //     'menu_slug'     => 'interactive-map',
         //     'capability'    => 'edit_pages',
-        //     'icon_url'      => 'dashicons-admin-appearance',
+        //     'icon_url'      => 'dashicons-location-alt', // https://developer.wordpress.org/resource/dashicons/
         //     'position'      => 30,
-        //     'acf_group_key' => $acf_json_store['your_field']['acf_key'] // Récupère une clé dans le store
+        //     'acf_group_key' => $acf_json_store['your_field']['acf_key'],
+        //     'flush_varnish' => true,
         // ];
 
         return $pages;
@@ -93,13 +94,15 @@ class SubWoodyTheme_Admin
     {
         // unset($sub_pages['your-sub_page']); // TODO: Supprimer cette ligne si vous ne souhaitez pas supprimer de sous-page d'options
 
-        // $sub_pages['your-sub_page'] = [
-        //     'page_title'    => 'Administration du ...',
-        //     'menu_title'    => 'Nom de la sous-page',
-        //     'menu_slug'     => 'your-slug',
+        // $sub_pages['useful-menu'] = [
+        //     'page_title'    => 'Administration des liens utiles',
+        //     'menu_title'    => 'Liens utiles',
+        //     'menu_slug'     => 'useful-menu',
         //     'parent_slug'   => 'custom-menus',
         //     'capability'    => 'edit_pages',
-        //     'acf_group_key' => $acf_json_store['your_field']['acf_key'], // Récupère une clé dans le store
+        //     'acf_group_key' => $acf_json_store['your_field']['acf_key'],
+        //     'flush_varnish' => true,
+        //     'translate_type' => 'simple_menu',
         // ];
 
         return $sub_pages;
