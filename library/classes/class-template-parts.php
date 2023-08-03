@@ -48,7 +48,7 @@ class SubWoodyTheme_TemplateParts
         $return['main_menu'] = Timber::compile($this->twig_paths['menus-desktop_menu-tpl_01'], $mainMenuVars);
 
         // Compile Mobile menu
-        $return['mobile_menu'] = Timber::compile($this->twig_paths['menus-mobile_menu-tpl_01'], $mainMenuVars);
+        $return['mobile_menu'] = Timber::compile($this->twig_paths['menus-mobile_menu-tpl_02'], $mainMenuVars);
 
         // Compile Side menu
         // $return['side_menu'] = Timber::compile($this->twig_paths['pages_parts-side_menu-tpl_01'], $this->sideMenuVars());
