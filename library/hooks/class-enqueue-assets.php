@@ -31,7 +31,7 @@ class SubWoodyTheme_Enqueue_Assets
         $fonts = [
             'google' => [
                 'families' => [
-                    'Raleway'
+                    'Raleway&display=swap' // Ne pas supprimer '&display=swap' : permet d'obtenir de meilleures performances
                 ]
             ]
         ];
