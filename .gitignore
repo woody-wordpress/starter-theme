@@ -2,6 +2,7 @@
 .vscode
 .DS_Store
 ._.*
+._*
 
 # Theme
 dist
