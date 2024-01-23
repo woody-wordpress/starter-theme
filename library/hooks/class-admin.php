@@ -35,6 +35,9 @@ class SubWoodyTheme_Admin
         // Permet d'appliquer le style des overlayed cards aux blocs d'images dans les sous-menus
         // add_filter('woody/submenus/images_list_overlayed_style', [$this, 'setImagesListOverlayedStyle'], 11);
 
+        // Permet d'ajouter une fonction de traduction personnalisée pour les menus
+        // add_filter('woody_translate_custom_option_page', [$this, 'translateOptionPages'], 10, 3);
+
         // Permet d'ajouter une metabox avec les class de section sur le tableau de bord
         add_action('wp_dashboard_setup', [$this, 'dashboardSetupWidgets']);
     }
@@ -118,5 +121,18 @@ class SubWoodyTheme_Admin
     public function setImagesListOverlayedStyle()
     {
         return true;
+    }
+
+    public function translatePages($field, $page_name, $target_lang) {
+        // if(!empty($field)) {
+        //     switch($page_name) {
+        //         default:
+        //             break;
+        //     }
+        // }
+
+        // output_log(sprintf("Le page %s a été traduite", $page_name));
+
+        // return $field;
     }
 }
