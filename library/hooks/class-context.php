@@ -16,15 +16,14 @@ class SubWoodyTheme_Context
 
     protected function registerHooks()
     {
-        add_filter('woody_theme_context', [$this, 'woodyThemeContext'], 10);
+        // add_filter('woody_theme_context', [$this, 'woodyThemeContext'], 10);
     }
 
     public function woodyThemeContext($context)
     {
         //$context['metas'][] = '<meta name="msvalidate.01" content="44C6D6BCD7EF9707330242312AB178BF" />';
 
-        //FIXME: Remove to display images properly
-        $context['body_class'] .= ' zoning-style';
+        $context['body_class'] .= ' my-body-class';
 
         return $context;
     }
