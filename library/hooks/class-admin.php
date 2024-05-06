@@ -123,7 +123,7 @@ class SubWoodyTheme_Admin
         return true;
     }
 
-    public function translatePages($field, $page_name, $target_lang) {
+    public function translateOptionPages($field, $page_name, $target_lang) {
         // if(!empty($field)) {
         //     switch($page_name) {
         //         default:
