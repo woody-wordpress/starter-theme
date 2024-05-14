@@ -30,7 +30,7 @@ class SubWoodyTheme_Polylang
     {
         // Commande pour créer automatiquement woody-theme.pot
         // A ouvrir ensuite avec PoEdit.app sous Mac
-        // cd ~/www/wordpress/current/web/app/themes/***sitekey***
-        // wp i18n make-pot . languages/***sitekey***.pot
+        // cd ~/www/themes/***sitekey***/current
+        // wp i18n make-pot .. languages/***sitekey***.pot
     }
 }
