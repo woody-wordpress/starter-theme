@@ -1,5 +1,5 @@
-$site_key: 'woody-sandbox'; // TODO: Change the sitekey
-$dist_dir: '/app/dist/#{$site_key}';
+$site_key: "woody-sandbox"; // TODO: Change the sitekey
+$dist_dir: "/app/dist/#{$site_key}";
 // Framework
 @import "./../fonts/woody-icons/_icons";
 @import "settings/settings";
@@ -10,3 +10,5 @@ $dist_dir: '/app/dist/#{$site_key}';
 // Custom
 @import "plugins/menus_v2/_index";
 @import "custom/_index";
+
+// Style inheritance : SITEKEY, SITEKEY, ... // TODO : remove this line if your theme is not a parent else, change sitekey
