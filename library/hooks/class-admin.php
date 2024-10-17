@@ -131,7 +131,7 @@ class SubWoodyTheme_Admin
         //     }
         // }
 
-        // output_log(sprintf("Le page %s a été traduite", $page_name));
+        // output_log(sprintf("La page %s a été traduite", $page_name));
 
         // return $field;
     }
