@@ -1,8 +1,6 @@
 $site_key: 'woody-sandbox'; // TODO: Change the sitekey
 $dist_dir: '/app/dist/#{$site_key}';
-@import "./../fonts/woody-icons/_icons";
-@import "wicon";
-@import "wicon/base";
+@import "./../fonts/woody-icons/_mixins";
 @import "woody-theme/src/scss/admin/_index";
 
 // Custom admin

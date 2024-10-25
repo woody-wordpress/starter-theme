@@ -1,7 +1,7 @@
 $site_key: "woody-sandbox"; // TODO: Change the sitekey
 $dist_dir: "/app/dist/#{$site_key}";
 // Framework
-@import "./../fonts/woody-icons/_icons";
+@import "./../fonts/woody-icons/_mixins";
 @import "settings/settings";
 @import "settings/vars";
 @import "settings/woody_vars/_index";
