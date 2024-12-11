@@ -10,10 +10,6 @@ class SubWoodyTheme_TemplateParts
 {
     private $twig_paths;
 
-    private $current_lang;
-
-    private $admin;
-
     private $home_id;
 
     public $website_logo;
@@ -22,12 +18,6 @@ class SubWoodyTheme_TemplateParts
     {
         // Twig paths
         $this->twig_paths = $woody_components;
-
-        // Instances Classes
-        $this->admin = new SubWoodyTheme_Admin();
-
-        // Current Language
-        $this->current_lang = $this->admin->current_lang;
 
         // Logo
         $this->website_logo = '<img class="lazyload" src="' . get_stylesheet_directory_uri() . '/logo.svg" alt="Logo SITEKEY">'; // TODO: edit alt
@@ -101,17 +91,19 @@ class SubWoodyTheme_TemplateParts
             ],
         ];
 
+        $current_lang = SubWoodyTheme_Polylang::get_current_lang();
+
         return [
             'brand_logo' => $this->website_logo,
             'social_networks' => [
                 'networks' => [
                     'twitter' => [
                         'icon' => 'wicon-002-twitter',
-                        'url' => $social_networks[$this->current_lang]['twitter'],
+                        'url' => $social_networks[$current_lang]['twitter'],
                     ],
                     'github' => [
                         'icon' => 'wicon-064-github',
-                        'url' => $social_networks[$this->current_lang]['github'],
+                        'url' => $social_networks[$current_lang]['github'],
                     ],
                 ]
             ],

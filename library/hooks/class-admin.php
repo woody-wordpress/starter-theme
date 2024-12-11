@@ -10,12 +10,9 @@
 
 class SubWoodyTheme_Admin
 {
-    public $current_lang;
-
     public function __construct()
     {
         $this->registerHooks();
-        $this->current_lang = function_exists('pll_current_language') ? pll_current_language() : 'fr';
     }
 
     protected function registerHooks()

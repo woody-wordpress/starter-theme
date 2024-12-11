@@ -23,6 +23,11 @@ class SubWoodyTheme_Polylang
         load_theme_textdomain('superot', get_stylesheet_directory() . '/languages'); //TODO: Change the sitekey
     }
 
+    public static function get_current_lang()
+    {
+        return woody_pll_current_language();
+    }
+
     /**
      * @noRector
      */

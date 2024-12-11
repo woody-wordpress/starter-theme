@@ -10,7 +10,6 @@
 class SubWoodyTheme_Tools
 {
 
-    private $current_lang;
     private $admin;
 
     public function __construct()
