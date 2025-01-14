@@ -1,0 +1,24 @@
+$countdown-time-gap: 15px;
+
+// Titre
+$countdown-title-font-family: $header-font-family;
+$countdown-title-font-size: 20px;
+$countdown-title-font-weight: normal;
+$countdown-title-color: $black;
+$countdown-title-root-color: $white;
+
+// Unit
+$countdown-unit-font-family: $countdown-title-font-family;
+$countdown-unit-font-size: 40px;
+$countdown-unit-font-weight: normal;
+$countdown-unit-align: center;
+$countdown-unit-color: $black;
+$countdown-unit-root-color: $white;
+
+// Label
+$countdown-label-font-family: $body-font-family;
+$countdown-label-font-size: 17px;
+$countdown-label-font-weight: normal;
+$countdown-label-align: center;
+$countdown-label-color: $primary-color;
+$countdown-label-root-color: $white;
